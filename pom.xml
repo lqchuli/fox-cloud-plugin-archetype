@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>fox-cloud-starter-parent</artifactId>
+        <groupId>org.elanfox.cloud</groupId>
+        <version>1.0.0.RELEASE</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>fox-cloud-plugin</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0.RELEASE</version>
+    <modules>
+        <module>fox-cloud-plugin-api</module>
+        <module>fox-cloud-plugin-biz</module>
+        <module>fox-cloud-plugin-common</module>
+        <module>fox-cloud-plugin-provider</module>
+        <module>fox-cloud-plugin-reference</module>
+        <module>fox-cloud-plugin-start</module>
+        <module>fox-cloud-plugin-view</module>
+    </modules>
+
+
+</project>
