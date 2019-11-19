@@ -1,0 +1,27 @@
+#非开发环境则会加载配置中心的配置，由运管分配
+fox:
+  cloud:
+    service:
+      enableToken: true
+      id: ${serviceId}
+      type: core
+      version: 1.0.0
+spring:
+  application:
+    name: ${rootArtifactId}
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        health-check-path: ${server.servlet.context-path}/actuator/health
+        prefer-ip-address: true
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      fail-fast: true
+server:
+  port: {port}
+  servlet:
+    context-path: /${rootArtifactId}

@@ -1,35 +1,25 @@
-fox:
-  cloud:
-    service:
-      enableToken: true
-      id: ${serviceId}
-      type: core
-      version: 1.0.0
+#通用配置信息
 spring:
-  application:
-    name: fox-cloud-plugin
-#  cloud:
-#    consul:
-#      host: localhost
-#      port: 8500
-#      discovery:
-#        health-check-path: ${server.servlet.context-path}/actuator/health
+  profiles:
+    include: jpa #是否加载jpa，可选jpa,feign
   jpa:
     hibernate:
-      ddl-auto: create
-    show-sql: true
+      ddl-auto: validate
     properties:
       hibernate:
         dialog: org.hibernate.dialect.MySQL5Dialect
-    open-in-view: false
-  datasource:
-    url: jdbc:mysql://47.110.154.27:3306/demo?useUnicode=true&characterEncoding=UTF8
-    username: toolalliance
-    password: root123
-    driver-class-name: com.mysql.cj.jdbc.Driver
 server:
-  servlet:
-    context-path: /${serviceId}
-  port: ${port}
+  undertow:
+    max-http-post-size: 0
+    # 数量一般和cup核心一致
+    io-threads: 4
+    # 阻塞任务线程池, 当执行类似servlet请求阻塞操作, undertow会从这个线程池中取得线程,它的值设置取决于系统的负载  io-threads*8
+    worker-threads: 32
+    direct-buffers: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "info,health,bus-refresh"
 
 
