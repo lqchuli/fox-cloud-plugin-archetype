@@ -16,10 +16,6 @@
     <dependencies>
         <dependency>
             <groupId>org.elanfox.cloud</groupId>
-            <artifactId>fox-cloud-common</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.elanfox.cloud</groupId>
             <artifactId>fox-cloud-utils</artifactId>
         </dependency>
         <dependency>
