@@ -22,11 +22,11 @@
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
         <!--页面，按需使用-->
-        <!--<dependency>-->
-        <!--<groupId>org.elanfox.cloud</groupId>-->
-        <!--<artifactId>fox-cloud-view</artifactId>-->
-        <!--<version>1.0.0.RELEASE</version>-->
-        <!--</dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.elanfox.cloud</groupId>-->
+        <!--            <artifactId>fox-cloud-view</artifactId>-->
+        <!--            <version>1.0.0.RELEASE</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.elanfox.cloud</groupId>
             <artifactId>fox-cloud-plugin-provider</artifactId>
