@@ -19,10 +19,6 @@
             <artifactId>fox-cloud-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.elanfox.cloud</groupId>
-            <artifactId>fox-cloud-starter-web</artifactId>
-        </dependency>
-        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>

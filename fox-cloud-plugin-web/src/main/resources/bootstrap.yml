@@ -1,8 +1,8 @@
-# 开发环境使用本地自定义配置，不启用配置中心
+#非开发环境则会加载配置中心的配置，由运管分配
 fox:
   cloud:
     service:
-      enableToken: false #开发环境不开启token
+      enableToken: true
       id: ${serviceId}
       type: core
       version: 1.0.0
@@ -10,15 +10,18 @@ spring:
   application:
     name: ${rootArtifactId}
   cloud:
-    config:
-      enabled: false #开发环境不使用配置中心
     consul:
       host: localhost
       port: 8500
       discovery:
         health-check-path: ${server.servlet.context-path}/actuator/health
         prefer-ip-address: true
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      fail-fast: true
 server:
-  port: {port}
+  port: ${port}
   servlet:
     context-path: /${rootArtifactId}

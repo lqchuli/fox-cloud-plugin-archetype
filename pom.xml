@@ -19,8 +19,7 @@
         <module>fox-cloud-plugin-common</module>
         <module>fox-cloud-plugin-provider</module>
         <module>fox-cloud-plugin-reference</module>
-        <module>fox-cloud-plugin-start</module>
-        <module>fox-cloud-plugin-view</module>
+        <module>fox-cloud-plugin-web</module>
     </modules>
 
 

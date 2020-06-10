@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>fox-cloud-plugin-start</artifactId>
+    <artifactId>fox-cloud-plugin-web</artifactId>
 
     <dependencies>
         <dependency>
@@ -21,11 +21,14 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.elanfox.cloud</groupId>
+            <artifactId>fox-cloud-starter-web</artifactId>
+        </dependency>
         <!--页面，按需使用-->
         <!--        <dependency>-->
-        <!--            <groupId>org.elanfox.cloud</groupId>-->
-        <!--            <artifactId>fox-cloud-view</artifactId>-->
-        <!--            <version>1.0.0.RELEASE</version>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-thymeleaf</artifactId>-->
         <!--        </dependency>-->
         <dependency>
             <groupId>org.elanfox.cloud</groupId>
