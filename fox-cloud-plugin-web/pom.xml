@@ -25,11 +25,6 @@
             <groupId>org.elanfox.cloud</groupId>
             <artifactId>fox-cloud-starter-web</artifactId>
         </dependency>
-        <!--页面，按需使用-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.boot</groupId>-->
-        <!--            <artifactId>spring-boot-starter-thymeleaf</artifactId>-->
-        <!--        </dependency>-->
         <dependency>
             <groupId>org.elanfox.cloud</groupId>
             <artifactId>fox-cloud-plugin-provider</artifactId>
@@ -38,10 +33,6 @@
         <dependency>
             <groupId>org.springframework.retry</groupId>
             <artifactId>spring-retry</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
     </dependencies>
 
