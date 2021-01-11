@@ -16,7 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>org.elanfox.cloud</groupId>
-            <artifactId>fox-cloud-starter-data-jpa</artifactId>
+            <artifactId>fox-cloud-starter-mybatis</artifactId>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -33,35 +33,4 @@
             <version>1.0.0.RELEASE</version>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.bsc.maven</groupId>
-                <artifactId>maven-processor-plugin</artifactId>
-                <version>2.0.5</version>
-                <executions>
-                    <execution>
-                        <id>process</id>
-                        <goals>
-                            <goal>process</goal>
-                        </goals>
-                        <phase>generate-sources</phase>
-                        <configuration>
-                            <processors>
-                                <processor>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</processor>
-                            </processors>
-                        </configuration>
-                    </execution>
-                </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.hibernate</groupId>
-                        <artifactId>hibernate-jpamodelgen</artifactId>
-                        <version>5.4.4.Final</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-        </plugins>
-    </build>
 </project>

@@ -1,13 +1,15 @@
 #通用配置信息
 spring:
   profiles:
-    include: jpa #是否加载jpa，可选jpa,feign
-  jpa:
-    hibernate:
-      ddl-auto: validate
-    properties:
-      hibernate:
-        dialog: org.hibernate.dialect.MySQL5Dialect
+    include: mybatis #是否加载jpa，可选jpa,feign
+  datasource:
+    url: jdbc:mysql://192.168.1.78:3306/icbc_jf?serverTimezone=Asia/Shanghai&useLegacyDatetimeCode=fasle&useUnicode=true&characterEncoding=utf-8&useSSL=true&zeroDateTimeBehavior=convertToNull
+    username: u_icbc_jf_db
+    password: p_icbc_pwd#
+  rabbitmq:
+    host: test.pinheng.com
+    username: admin
+    password: root123
 server:
   undertow:
     max-http-post-size: 0
@@ -16,6 +18,12 @@ server:
     # 阻塞任务线程池, 当执行类似servlet请求阻塞操作, undertow会从这个线程池中取得线程,它的值设置取决于系统的负载  io-threads*8
     worker-threads: 32
     direct-buffers: true
+logging:
+  level:
+    com.lanxi.egift.merchant.web.mapper: info
+mybatis:
+  type-aliases-package: {mapper-package}
+  mapper-locations: classpath:mapper/*:xml
 management:
   endpoints:
     web:
